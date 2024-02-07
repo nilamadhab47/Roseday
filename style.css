@@ -356,3 +356,28 @@ p{
     font-weight: lighter;
     margin-left: -5rem;
 }
+
+@keyframes petalsFall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+.falling-petal {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #D24150;
+  border-radius: 50%;
+  animation: petalsFall 5s linear infinite;
+  opacity: 0;
+}
+
+/* Adjust the position of falling petals as needed */
+.falling-petal:nth-child(1) { left: 10%; }
+.falling-petal:nth-child(2) { left: 20%; }
